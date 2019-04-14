@@ -1,14 +1,12 @@
-from sets import Set
-
 class Inst:
-    def __init__(self, inst, raw = True):
+    def __init__(self, inst, raw=True):
         # Fetech binary encoding
-        if raw == True: # From cuobjdump
+        if raw is True:  # From cuobjdump
             self.__enc = inst[-2]
             inst.pop(-1)
             inst.pop(-1)
             inst.pop(-1)
-        else: # From nvdisasm
+        else:  # From nvdisasm
             self.__enc = ""
 
         if inst[0] == '{':  # Check dual issue
@@ -24,7 +22,7 @@ class Inst:
         # Split opcode
         self.__modifier = ops.split(".")[1:]
         # Fetech operands and remove ; and ,
-        self.__operands = ' '.join(inst).replace(";", "").replace(",", "").replace("-","").replace("|","")
+        self.__operands = ' '.join(inst).replace(";", "").replace(",", "").replace("-", "").replace("|", "")
 
     def op(self):
         return str(self.__op)

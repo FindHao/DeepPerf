@@ -69,6 +69,7 @@ fi
 
 for f in $asm
 do
+
     cat $f >> /tmp/all.sass
 done
 

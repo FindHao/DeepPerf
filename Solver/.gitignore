@@ -1,2 +1,6 @@
 data/*
 output/*
+将删除 .idea/
+将删除 src/a.out
+将删除 src/config.py
+将删除 test.pl

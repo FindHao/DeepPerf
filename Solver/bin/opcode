@@ -16,4 +16,4 @@ output_file=$output_directory""$arch".opcode"
 mkdir -p $output_directory
 rm -rf $output_file || true
 echo "Output file: "$output_file
-python $src_directory"opcode.py" $asm_directory""$arch".sass" $arch $output_file
+python $src_directory"opcoder.py" $asm_directory""$arch".sass" $arch $output_file
